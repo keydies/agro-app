@@ -112,3 +112,16 @@
 	}
   }
 }
+
+@media (max-width: 530px) {
+  .auth-page__links {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	a {
+	  margin: 7.5px 0;
+	  padding: 8px 15px;
+	}
+  }
+}

@@ -9,7 +9,7 @@ import '../../scss/App.scss';
 
 export function App(): JSX.Element {
 	// TODO: add isAuth from DB
-	const isAuth = true;
+	const isAuth = false;
 	const navigate = useNavigate();
 
 	useEffect(() => {

@@ -8,12 +8,10 @@ const PORT = config.get('serverPort');
 const runServer = async () => {
 	try {
 		await mongoose.connect(config.get('dbUrl'));
-		console.log();
 		app.listen(PORT, () => {
 			console.log('Server has been started on port', PORT);
 		});
-	} catch (event) {
-	}
+	} catch (event) {}
 };
 
 runServer();
