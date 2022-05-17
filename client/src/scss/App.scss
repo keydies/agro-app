@@ -1,0 +1,12 @@
+@import 'vars';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $main-font;
+}
+
+#root, .container {
+  min-height: 100vh;
+}

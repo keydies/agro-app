@@ -1,0 +1,114 @@
+@import 'vars';
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $white;
+
+  &__container {
+	max-width: 1600px;
+	margin: 0 auto;
+	background: $white;
+	padding: 50px 50px;
+	border-radius: 25px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0 10px 36px 0, rgba(0, 0, 0, 0.06) 0 0 0 1px;
+  }
+
+  &__links {
+	text-align: center;
+	padding: 10px 15px;
+	margin-bottom: 15px;
+
+	a {
+	  display: inline-block;
+	  padding: 10px 30px;
+	  border: 2px solid $middle-blue;
+	  text-decoration: none;
+	  color: $white;
+	  background: $middle-blue;
+	  border-radius: 5px;
+	  font-size: 18px;
+	  text-transform: uppercase;
+	  letter-spacing: 1px;
+	  box-shadow: 3px 3px 10px $middle-blue;
+
+	  &:hover {
+		box-shadow: 3px 3px 10px $blue;
+		background: $white;
+		color: $dark-blue;
+		transition: .5s;
+
+	  }
+	}
+  }
+
+  &__registration {
+	margin-right: 2.5px;
+  }
+
+  &__login {
+	margin-left: 2.5px;
+  }
+
+  .active {
+	background: $white;
+	color: $dark-blue;
+  }
+
+  .login-form, .registration-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: $dark-blue;
+
+	&__email, &__password, &__username {
+	  display: flex;
+	  flex-direction: column;
+	}
+
+	&__email-input, &__password-input, &__username-input {
+	  padding: 12px 100px 12px 20px;
+	  font-size: 16px;
+	  letter-spacing: 1px;
+	  outline: none;
+	  border: 2px solid $middle-blue;
+	  border-radius: 5px;
+	  box-shadow: 3px 3px 5px $middle-blue;
+	  color: $dark-blue;
+	  margin-bottom: 20px;
+
+	  &::placeholder {
+		color: $middle-blue;
+	  }
+
+	  &:focus {
+		box-shadow: 3px 3px 10px $middle-blue;
+	  }
+	}
+
+	&__email-label, &__password-label, &__username-label {
+	  padding: 0 0 5px 5px;
+	}
+
+	&__sign-in-button {
+	  font-size: 18px;
+	  padding: 10px 50px;
+	  letter-spacing: 2px;
+	  box-shadow: 3px 3px 10px $middle-blue;
+	  background: $middle-blue;
+	  border: 2px solid $middle-blue;
+	  border-radius: 5px;
+	  color: $white;
+	  margin-top: 10px;
+
+	  &:hover {
+		cursor: pointer;
+		background: $white;
+		color: $dark-blue;
+		transition: .3s;
+	  }
+	}
+  }
+}
