@@ -1,9 +1,11 @@
 const Router = require('express');
-const User = require('../models/User');
 const config = require('config');
 const jwt = require('jsonwebtoken');
-const router = new Router();
+
+const User = require('../models/User');
 const authMiddleware = require('../middleware/auth.middleware');
+
+const router = new Router();
 
 router.get('/auth', authMiddleware, async (req, res) => {
 	try {

@@ -1,5 +1,7 @@
 import axios from 'axios';
+
 import { AppDispatch } from '../store/store';
+
 import { clearFields } from '../store/reducers/registrationFormSlice';
 
 export const registration = (

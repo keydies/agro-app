@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import { App } from './components/Static/App';
 import { setupStore } from './store/store';
-import { BrowserRouter } from 'react-router-dom';
+
+import { App } from './components/Static/App';
 
 const store = setupStore();
 

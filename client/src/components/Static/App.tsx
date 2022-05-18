@@ -1,16 +1,16 @@
 import { useEffect } from 'react';
-
 import { Route, Routes, useNavigate } from 'react-router-dom';
+
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+
+import { auth } from '../../asyncActions/auth';
 
 import { Auth } from '../../pages/Auth';
 import { Home } from '../../pages/Home';
 
 import '../../scss/App.scss';
-import { useAppDispatch, useAppSelector } from '../../hooks/redux';
-import { auth } from '../../asyncActions/auth';
 
 export function App(): JSX.Element {
-	// TODO: add isAuth from DB
 	const isAuth = useAppSelector(state => state.userReducer.isAuth);
 	const navigate = useNavigate();
 	const dispatch = useAppDispatch();

@@ -8,8 +8,9 @@ import {
 	changeUsernameValue
 } from '../../store/reducers/registrationFormSlice';
 
-import '../../scss/Auth.scss';
 import { registration } from '../../asyncActions/registration';
+
+import '../../scss/Auth.scss';
 
 export function Registration(): JSX.Element {
 	const { email, username, password } = useAppSelector(

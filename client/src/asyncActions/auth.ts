@@ -1,6 +1,8 @@
 import axios from 'axios';
-import { authUser } from '../store/reducers/userSlice';
+
 import { AppDispatch } from '../store/store';
+
+import { authUser } from '../store/reducers/userSlice';
 
 export const auth = () => {
 	return async (dispatch: AppDispatch) => {

@@ -7,8 +7,9 @@ import {
 	changePasswordValue
 } from '../../store/reducers/loginFormSlice';
 
-import '../../scss/Auth.scss';
 import { login } from '../../asyncActions/login';
+
+import '../../scss/Auth.scss';
 
 export function Login() {
 	const dispatch = useAppDispatch();
