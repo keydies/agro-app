@@ -34,12 +34,15 @@ router.post(
 					message: `User with email ${email} already exist`
 				});
 			}
-			const hashPassword = await bcrypt.hash(password, 15);
+			const hashPassword = await bcrypt.hash(password, 8);
 
 			const user = new User({ email, username, password: hashPassword });
 			await user.save();
 
-			return res.json({ message: 'User was created' });
+			return res.json({
+				message:
+					'Ви успішно зареєструвались. Пройдіть авторизацію з цими даними!'
+			});
 		} catch (e) {
 			console.log(e);
 			res.send({ message: 'Server error' });

@@ -9,6 +9,7 @@ import {
 } from '../../store/reducers/registrationFormSlice';
 
 import '../../scss/Auth.scss';
+import { registration } from '../../asyncActions/registration';
 
 export function Registration(): JSX.Element {
 	const { email, username, password } = useAppSelector(
@@ -77,7 +78,12 @@ export function Registration(): JSX.Element {
 				/>
 			</div>
 			<div className='registration-form__sign-in'>
-				<button className='registration-form__sign-in-button'>
+				<button
+					className='registration-form__sign-in-button'
+					onClick={() =>
+						dispatch(registration(email, username, password))
+					}
+				>
 					Зареєструватись
 				</button>
 			</div>

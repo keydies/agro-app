@@ -8,10 +8,12 @@ import {
 } from '../../store/reducers/loginFormSlice';
 
 import '../../scss/Auth.scss';
+import { login } from '../../asyncActions/login';
 
 export function Login() {
 	const dispatch = useAppDispatch();
 	const { email, password } = useAppSelector(state => state.loginFormReducer);
+	const isLoading = useAppSelector(state => state.userReducer.isLoading);
 	return (
 		<form
 			className='login-form'
@@ -56,7 +58,16 @@ export function Login() {
 				/>
 			</div>
 			<div className='login-form__sign-in'>
-				<button className='login-form__sign-in-button'>Увійти</button>
+				{!isLoading ? (
+					<button
+						className='login-form__sign-in-button'
+						onClick={() => dispatch(login(email, password))}
+					>
+						Увійти
+					</button>
+				) : (
+					<div className='loading'>Loading...</div>
+				)}
 			</div>
 		</form>
 	);
