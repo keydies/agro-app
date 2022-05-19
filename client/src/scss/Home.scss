@@ -1,0 +1,49 @@
+@import 'vars';
+
+.home-page {
+  background: $white;
+  min-height: 100vh;
+
+  .header {
+	box-shadow: 1px 1px 3px $middle-blue;
+	padding: 5px 0;
+
+	&__logo {
+	  font-size: 24px;
+	  color: $middle-blue;
+	  font-style: italic;
+	  padding: 0 10px;
+	}
+
+	&__container {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  max-width: 1600px;
+	  margin: 0 auto;
+	}
+
+	&__navigation {
+	  &-list {
+		margin: 5px 0;
+	  }
+
+	  &-item {
+		text-decoration: none;
+		color: $middle-blue;
+		font-size: 22px;
+		margin: 0 10px;
+		border: none;
+		padding: 5px 10px;
+
+		&:hover {
+		  background: $middle-blue;
+		  color: $white;
+		  transition: .3s;
+		  cursor: pointer;
+		  border-radius: 5px;
+		}
+	  }
+	}
+  }
+}
