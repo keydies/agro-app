@@ -1,4 +1,3 @@
-import { Navigation } from './Navigation';
 import { useState } from 'react';
 import { Menu } from './Menu';
 
@@ -18,12 +17,12 @@ export function Header() {
 		<header className='header'>
 			<div className='header__container'>
 				<div className='header__logo'>Agro App</div>
-				<Navigation />
+				<Menu className='header' />
 				<div className={className} onClick={handleModal}>
 					<span></span>
 				</div>
 			</div>
-			{openModal ? <Menu /> : null}
+			{openModal ? <Menu className='menu' /> : null}
 		</header>
 	);
 }
