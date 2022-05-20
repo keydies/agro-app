@@ -7,6 +7,7 @@ import '../../scss/Home.scss';
 
 export function Navigation() {
 	const dispatch = useAppDispatch();
+
 	return (
 		<nav className='header__navigation'>
 			<ul className='header__navigation-list'>
