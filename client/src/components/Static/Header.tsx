@@ -1,24 +1,26 @@
-import { useState } from 'react';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+
 import { Menu } from './Menu';
 
-export function Header() {
-	const [openModal, setOpenModal] = useState<boolean>(false);
-	const [className, setClassName] = useState<string>('header__burger');
-	const [active, setActive] = useState<boolean>(false);
+import { handleModal } from '../../store/reducers/headerBurgerSlice';
 
-	const handleModal = () => {
-		setOpenModal(!openModal);
-		setActive(!active);
-		!active
-			? setClassName('header__burger active')
-			: setClassName('header__burger');
-	};
+export function Header() {
+	const className = useAppSelector(
+		state => state.headerBurgerReducer.className
+	);
+	const openModal = useAppSelector(
+		state => state.headerBurgerReducer.openModal
+	);
+	const dispatch = useAppDispatch();
 	return (
 		<header className='header'>
 			<div className='header__container'>
 				<div className='header__logo'>Agro App</div>
 				<Menu className='header' />
-				<div className={className} onClick={handleModal}>
+				<div
+					className={className}
+					onClick={() => dispatch(handleModal())}
+				>
 					<span></span>
 				</div>
 			</div>

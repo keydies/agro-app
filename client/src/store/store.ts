@@ -3,11 +3,13 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { userReducer } from './reducers/userSlice';
 import { registrationFormReducer } from './reducers/registrationFormSlice';
 import { loginFormReducer } from './reducers/loginFormSlice';
+import { headerBurgerReducer } from './reducers/headerBurgerSlice';
 
 const rootReducer = combineReducers({
 	userReducer,
 	registrationFormReducer,
-	loginFormReducer
+	loginFormReducer,
+	headerBurgerReducer
 });
 
 export const setupStore = () => {

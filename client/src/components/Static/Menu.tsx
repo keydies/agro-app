@@ -1,12 +1,13 @@
 import { NavLink } from 'react-router-dom';
-import { logoutUser } from '../../store/reducers/userSlice';
+
 import { useAppDispatch } from '../../hooks/redux';
 
-import '../../scss/Home.scss';
+import { logoutUser } from '../../store/reducers/userSlice';
+import { handleModal } from '../../store/reducers/headerBurgerSlice';
 
-interface IMenuProps {
-	className: string;
-}
+import { IMenuProps } from '../../types/IMenuProps';
+
+import '../../scss/Home.scss';
 
 export const Menu = ({ className }: IMenuProps) => {
 	const dispatch = useAppDispatch();
@@ -16,18 +17,21 @@ export const Menu = ({ className }: IMenuProps) => {
 				<NavLink
 					to='/home/guide'
 					className={`${className}__navigation-item`}
+					onClick={() => dispatch(handleModal())}
 				>
 					Гайд
 				</NavLink>
 				<NavLink
 					to='/home/plan'
 					className={`${className}__navigation-item`}
+					onClick={() => dispatch(handleModal())}
 				>
 					Створити план
 				</NavLink>
 				<NavLink
 					to='/home/profile'
 					className={`${className}__navigation-item`}
+					onClick={() => dispatch(handleModal())}
 				>
 					Профіль
 				</NavLink>
