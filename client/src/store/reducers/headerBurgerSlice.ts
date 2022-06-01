@@ -1,23 +1,23 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { IBurger } from '../../types/IBurger';
+import { IBurgerModal } from '../../types/IBurgerModal';
 
-const initialState: IBurger = {
+const initialState: IBurgerModal = {
 	openModal: false,
-	className: 'header__burger',
+	burgerClassName: 'header__burger',
 	active: false
 };
 
 export const headerBurgerSlice = createSlice({
-	name: 'burger',
+	name: 'burgerModalWindow',
 	initialState,
 	reducers: {
 		handleModal(state) {
 			state.openModal = !state.openModal;
 			state.active = !state.active;
 			state.active
-				? (state.className = 'header__burger active')
-				: (state.className = 'header__burger');
+				? (state.burgerClassName = 'header__burger active')
+				: (state.burgerClassName = 'header__burger');
 		}
 	}
 });

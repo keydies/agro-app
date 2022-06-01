@@ -2,11 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const config = require('config');
 
-const registrationRouter = require('./routes/registration.route');
-const loginRouter = require('./routes/login.route');
-const authRouter = require('./routes/auth.route');
+const registrationRouter = require('./src/routes/registration.route');
+const loginRouter = require('./src/routes/login.route');
+const authRouter = require('./src/routes/auth.route');
 
-const corsMiddleware = require('./middleware/cors.middleware');
+const corsMiddleware = require('./src/middleware/cors.middleware');
 
 const app = express();
 const PORT = config.get('serverPort');

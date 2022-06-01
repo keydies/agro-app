@@ -5,8 +5,8 @@ import { Menu } from './Menu';
 import { handleModal } from '../../store/reducers/headerBurgerSlice';
 
 export function Header() {
-	const className = useAppSelector(
-		state => state.headerBurgerReducer.className
+	const burgerClassName = useAppSelector(
+		state => state.headerBurgerReducer.burgerClassName
 	);
 	const openModal = useAppSelector(
 		state => state.headerBurgerReducer.openModal
@@ -18,7 +18,7 @@ export function Header() {
 				<div className='header__logo'>Agro App</div>
 				<Menu className='header' />
 				<div
-					className={className}
+					className={burgerClassName}
 					onClick={() => dispatch(handleModal())}
 				>
 					<span></span>
