@@ -1,8 +1,9 @@
 import { useAppDispatch, useAppSelector } from '../../hooks/redux';
 
-import { Menu } from './Menu';
+import { DesktopMenu } from './DesktopMenu';
 
 import { handleModal } from '../../store/reducers/headerBurgerSlice';
+import { ResponsiveMenu } from './ResponsiveMenu';
 
 export function Header() {
 	const burgerClassName = useAppSelector(
@@ -16,7 +17,7 @@ export function Header() {
 		<header className='header'>
 			<div className='header__container'>
 				<div className='header__logo'>Agro App</div>
-				<Menu className='header' />
+				<DesktopMenu />
 				<div
 					className={burgerClassName}
 					onClick={() => dispatch(handleModal())}
@@ -24,7 +25,7 @@ export function Header() {
 					<span></span>
 				</div>
 			</div>
-			{openModal ? <Menu className='menu' /> : null}
+			{openModal ? <ResponsiveMenu /> : null}
 		</header>
 	);
 }

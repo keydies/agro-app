@@ -1,134 +1,136 @@
 @import 'vars';
 
 .home-page {
-  background: $white;
-  min-height: 100vh;
+	background: $white;
+	min-height: 100vh;
 
-  .header {
-	box-shadow: 1px 1px 3px $middle-blue;
-	padding: 5px 0;
+	.header {
+		box-shadow: 1px 1px 3px $middle-blue;
+		padding: 5px 0;
 
-	&__logo {
-	  font-size: 24px;
-	  color: $middle-blue;
-	  font-style: italic;
-	  padding: 0 10px;
-	}
-
-	&__container {
-	  display: flex;
-	  justify-content: space-between;
-	  align-items: center;
-	  max-width: 1600px;
-	  margin: 0 auto;
-	}
-
-	&__navigation {
-	  &-list {
-		margin: 5px 0;
-	  }
-
-	  &-item {
-		text-decoration: none;
-		color: $middle-blue;
-		font-size: 22px;
-		margin: 0 10px;
-		border: none;
-		padding: 5px 10px;
-
-		&:hover {
-		  background: $middle-blue;
-		  color: $white;
-		  transition: .3s;
-		  cursor: pointer;
-		  border-radius: 5px;
+		&__logo {
+			font-size: 24px;
+			color: $middle-blue;
+			font-style: italic;
+			padding: 0 10px;
 		}
-	  }
-	}
 
-	&__burger {
-	  position: absolute;
+		&__container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			max-width: 1600px;
+			margin: 0 auto;
+		}
+
+		&__navigation {
+			&-list {
+				margin: 5px 0;
+			}
+
+			&-item {
+				text-decoration: none;
+				color: $middle-blue;
+				font-size: 22px;
+				margin: 0 10px;
+				border: none;
+				padding: 5px 10px;
+
+				&:hover {
+					background: $middle-blue;
+					color: $white;
+					transition: 0.3s;
+					cursor: pointer;
+					border-radius: 5px;
+				}
+			}
+		}
+
+		&__burger {
+			position: absolute;
+		}
 	}
-  }
 }
 
 .menu__navigation {
-  min-height: 100vh;
+	min-height: 100vh;
 
-  &-list {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-  }
+	&-list {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 
-  &-item {
-	text-decoration: none;
-	color: $middle-blue;
-	font-size: 18px;
-	margin: 10px 0;
-	border: none;
-	padding: 10px 0;
-  }
+	&-item {
+		text-decoration: none;
+		color: $middle-blue;
+		font-size: 18px;
+		margin: 10px 0;
+		border: none;
+		padding: 10px 0;
+	}
 }
 
-@media (max-width: 767px) {
-  .header {
-	&__burger {
-	  display: block;
-	  width: 22px;
-	  height: 22px;
-	  cursor: pointer;
-	  margin-right: 15px;
-	  right: 0;
+@media (max-width: 800px) {
+	.header {
+		&__burger {
+			display: block;
+			width: 22px;
+			height: 22px;
+			cursor: pointer;
+			margin-right: 15px;
+			right: 0;
 
-	  &.active:before {
-		transform: rotate(45deg);
-		top: 10px;
-	  }
+			&.active:before {
+				transform: rotate(45deg);
+				top: 10px;
+			}
 
-	  &.active:after {
-		transform: rotate(-45deg);
-		bottom: 10px;
-	  }
+			&.active:after {
+				transform: rotate(-45deg);
+				bottom: 10px;
+			}
 
-	  &.active span {
-		transform: scale(0);
-	  }
+			&.active span {
+				transform: scale(0);
+			}
 
-	  &:before {
-		content: '';
-		position: absolute;
-		top: 0;
-		width: 22px;
-		height: 2px;
-		background: $middle-blue;
-		transition: .3s;
-	  }
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				width: 22px;
+				height: 2px;
+				background: $middle-blue;
+				transition: 0.3s;
+			}
 
-	  &:after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		width: 22px;
-		height: 2px;
-		background: $middle-blue;
-		transition: .3s;
-	  }
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				width: 22px;
+				height: 2px;
+				background: $middle-blue;
+				transition: 0.3s;
+			}
 
-	  span {
-		position: absolute;
-		top: 10px;
-		width: 22px;
-		height: 2px;
-		background: $middle-blue;
-		transition: .3s;
-	  }
+			span {
+				position: absolute;
+				top: 10px;
+				width: 22px;
+				height: 2px;
+				background: $middle-blue;
+				transition: 0.3s;
+			}
+		}
+
+		&__navigation {
+			display: none;
+		}
 	}
-
-	&__navigation {
-	  display: none;
+	.menu__navigation-item {
+		font-size: 20px;
 	}
-  }
-
 }

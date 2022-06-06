@@ -1,42 +1,45 @@
 import { NavLink } from 'react-router-dom';
-
 import { useAppDispatch } from '../../hooks/redux';
-
-import { logoutUser } from '../../store/reducers/userSlice';
 import { handleModal } from '../../store/reducers/headerBurgerSlice';
-
-import { IMenuProps } from '../../types/IMenuProps';
+import { logoutUser } from '../../store/reducers/userSlice';
 
 import '../../scss/Home.scss';
 
-export const Menu = ({ className }: IMenuProps) => {
+export function ResponsiveMenu() {
 	const dispatch = useAppDispatch();
 	return (
-		<nav className={`${className}__navigation`}>
-			<ul className={`${className}__navigation-list`}>
+		<nav className='menu__navigation'>
+			<ul className='menu__navigation-list'>
 				<NavLink
 					to='/home/guide'
-					className={`${className}__navigation-item`}
+					className='menu__navigation-item'
 					onClick={() => dispatch(handleModal())}
 				>
 					Гайд
 				</NavLink>
 				<NavLink
+					to='/home/handbook'
+					className='menu__navigation-item'
+					onClick={() => dispatch(handleModal())}
+				>
+					Довідник
+				</NavLink>
+				<NavLink
 					to='/home/plan'
-					className={`${className}__navigation-item`}
+					className='menu__navigation-item'
 					onClick={() => dispatch(handleModal())}
 				>
 					Створити план
 				</NavLink>
 				<NavLink
 					to='/home/profile'
-					className={`${className}__navigation-item`}
+					className='menu__navigation-item'
 					onClick={() => dispatch(handleModal())}
 				>
 					Профіль
 				</NavLink>
 				<button
-					className={`${className}__navigation-item`}
+					className='menu__navigation-item'
 					onClick={() => dispatch(logoutUser())}
 				>
 					Вийти
@@ -44,4 +47,4 @@ export const Menu = ({ className }: IMenuProps) => {
 			</ul>
 		</nav>
 	);
-};
+}

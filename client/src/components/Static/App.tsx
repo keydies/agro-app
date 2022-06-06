@@ -17,12 +17,14 @@ export function App(): JSX.Element {
 
 	useEffect(() => {
 		dispatch(auth());
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	useEffect(() => {
 		!isAuth
 			? navigate('auth/login', { replace: true })
-			: navigate('home', { replace: true });
+			: navigate('home/guide', { replace: true });
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [isAuth]);
 
 	return (
