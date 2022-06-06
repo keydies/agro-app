@@ -4,12 +4,14 @@ import { userReducer } from './reducers/userSlice';
 import { registrationFormReducer } from './reducers/registrationFormSlice';
 import { loginFormReducer } from './reducers/loginFormSlice';
 import { headerBurgerReducer } from './reducers/headerBurgerSlice';
+import { articlesReducer } from './reducers/articlesSlice';
 
 const rootReducer = combineReducers({
 	userReducer,
 	registrationFormReducer,
 	loginFormReducer,
-	headerBurgerReducer
+	headerBurgerReducer,
+	articlesReducer
 });
 
 export const setupStore = () => {

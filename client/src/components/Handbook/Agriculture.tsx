@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import { Link } from 'react-router-dom';
 import { PlantIcon } from '../svg/PlantIcon';
 
 export function Agriculture() {
@@ -7,9 +8,13 @@ export function Agriculture() {
 			<h3 className='handbook__list-title'>Агрокультура</h3>
 			<ul className='handbook__list'>
 				<li className='handbook__list-item'>
-					<PlantIcon />
-					Пшениця
-					<span>:загальні рекомендації, ціноутворення, догляд</span>
+					<Link to='/home/handbook/wheat'>
+						<PlantIcon />
+						Пшениця
+						<span>
+							:загальні рекомендації, ціноутворення, догляд
+						</span>
+					</Link>
 				</li>
 				<li className='handbook__list-item'>
 					<PlantIcon />
