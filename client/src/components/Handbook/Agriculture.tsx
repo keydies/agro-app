@@ -1,44 +1,32 @@
 import { Fragment } from 'react';
 import { Link } from 'react-router-dom';
+import { useAppDispatch, useAppSelector } from '../../hooks/redux';
+import { getArticle } from '../../store/reducers/articlesSlice';
 import { PlantIcon } from '../svg/PlantIcon';
 
 export function Agriculture() {
+	const dispatch = useAppDispatch();
+	const articles = useAppSelector(state => state.articlesReducer.articles);
 	return (
 		<Fragment>
 			<h3 className='handbook__list-title'>Агрокультура</h3>
 			<ul className='handbook__list'>
-				<li className='handbook__list-item'>
-					<Link to='/home/handbook/wheat'>
-						<PlantIcon />
-						Пшениця
-						<span>
-							:загальні рекомендації, ціноутворення, догляд
-						</span>
-					</Link>
-				</li>
-				<li className='handbook__list-item'>
-					<PlantIcon />
-					Сонях
-					<span>
-						:найкраща місцевість, строки посадки, рекомендації по
-						догляду
-					</span>
-				</li>
-				<li className='handbook__list-item'>
-					<PlantIcon />
-					Кукурудза
-					<span>
-						:ціни. Як виростити та зайнятись продажем кукурудзи?
-					</span>
-				</li>
-				<li className='handbook__list-item'>
-					<PlantIcon />
-					Соя
-					<span>
-						:ціноутворення на ринку сої. Вигідно зараз вирощувати
-						агрокультуру?
-					</span>
-				</li>
+				{articles.map(title => (
+					<li className='handbook__list-item' key={title._id}>
+						<Link
+							to='/home/handbook/article'
+							// TODO: find valid type to event
+							onClick={(e: any) =>
+								dispatch(
+									getArticle(e.currentTarget.textContent)
+								)
+							}
+						>
+							<PlantIcon />
+							{title.title}
+						</Link>
+					</li>
+				))}
 			</ul>
 		</Fragment>
 	);

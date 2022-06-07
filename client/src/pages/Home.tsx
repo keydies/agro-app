@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { Handbook } from '../components/Handbook/Handbook';
-import { Wheat } from '../components/Handbook/Articles/Wheat';
+import { Article } from '../components/Handbook/Article';
 
 import { Header } from '../components/Static/Header';
 
@@ -12,7 +12,7 @@ export function Home() {
 			<Header />
 			<Routes>
 				<Route path='handbook' element={<Handbook />} />
-				<Route path='handbook/wheat' element={<Wheat />} />
+				<Route path='handbook/article' element={<Article />} />
 			</Routes>
 		</div>
 	);

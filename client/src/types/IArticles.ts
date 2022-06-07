@@ -6,4 +6,5 @@ export interface IArticles {
 
 export interface IArticlesState {
 	articles: IArticles[];
+	title: string;
 }
