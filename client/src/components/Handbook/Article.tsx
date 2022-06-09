@@ -5,9 +5,9 @@ export function Article() {
 	const currentArticle = useAppSelector(state => state.articlesReducer.title);
 	const article = articles.find(obj => obj.title === currentArticle);
 	return (
-		<div>
-			<div>{article?.title}</div>
-			{article?.body}
+		<div className='article'>
+			<h3 className='article__title'>{article?.title}</h3>
+			<p className='article__text'>{article?.body}</p>
 		</div>
 	);
 }

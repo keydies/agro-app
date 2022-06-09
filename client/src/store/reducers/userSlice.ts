@@ -6,7 +6,8 @@ const initialState: IUserState = {
 	currentUser: {
 		id: '',
 		email: '',
-		username: ''
+		username: '',
+		areas: []
 	},
 	isAuth: false,
 	isLoading: false,

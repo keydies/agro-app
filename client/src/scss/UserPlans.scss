@@ -1,0 +1,40 @@
+@import 'vars';
+
+.user-plans {
+	&__title {
+		text-align: center;
+		color: $middle-blue;
+		font-weight: 400;
+		padding: 15px 0 10px 0;
+	}
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__detail {
+		border: 1px solid rgba(0, 0, 0, 0.02);
+		box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+			rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+		border-radius: 5px;
+		padding: 5px;
+	}
+	&__plan {
+		border: 1px solid rgba(0, 0, 0, 0.02);
+		box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+			rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+		border-radius: 5px;
+		padding: 20px 40px;
+		margin: 5px;
+	}
+	&__details {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+	&__plan-title {
+		color: $middle-blue;
+		font-size: 16px;
+		letter-spacing: 1px;
+	}
+}

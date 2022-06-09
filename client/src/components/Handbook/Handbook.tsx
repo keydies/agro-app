@@ -1,11 +1,9 @@
 import { useEffect } from 'react';
-
-import { fetchArticles } from '../../asyncActions/fetchArticles';
 import { useAppDispatch } from '../../hooks/redux';
-import '../../scss/Handbook.scss';
+import { fetchArticles } from '../../asyncActions/fetchArticles';
 import { Agriculture } from './Agriculture';
-
 import { WorkTypes } from './WorkTypes';
+import '../../scss/Handbook.scss';
 
 export function Handbook() {
 	const dispatch = useAppDispatch();

@@ -1,0 +1,92 @@
+@import 'vars';
+
+.about-area {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid rgba(0, 0, 0, 0.02);
+		box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+			rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+		border-radius: 5px;
+		padding: 50px 100px;
+	}
+	height: 92vh;
+	&__title {
+		font-weight: 400;
+		letter-spacing: 1px;
+		color: $middle-blue;
+		padding: 5px 0 15px 0;
+	}
+	&__cadastral,
+	&__square {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		label {
+			font-size: 18px;
+			color: $middle-blue;
+			letter-spacing: 1px;
+			padding-bottom: 5px;
+		}
+		input {
+			padding: 12px 100px 12px 20px;
+			font-size: 16px;
+			letter-spacing: 1px;
+			outline: none;
+			border: 1px solid rgba(0, 0, 0, 0.02);
+			box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+				rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+			border-radius: 5px;
+			color: $dark-blue;
+			margin-bottom: 20px;
+			&::-webkit-outer-spin-button,
+			&::-webkit-inner-spin-button {
+				-webkit-appearance: none;
+				margin: 0;
+			}
+			&::placeholder {
+				color: $middle-blue;
+			}
+		}
+	}
+	&__btns {
+		display: flex;
+		align-items: center;
+	}
+	&__add-info button {
+		border: 1px solid $middle-blue;
+		padding: 6px 30px;
+		border-radius: 5px;
+		margin-left: 10px;
+		font-size: 18px;
+		color: $middle-blue;
+		&:hover {
+			cursor: pointer;
+			background-color: $middle-blue;
+			color: $white;
+			transition: all 0.3s;
+		}
+	}
+	&__next-page a {
+		border: 1px solid $middle-blue;
+		padding: 7px 30px;
+		border-radius: 5px;
+		margin-left: 10px;
+		font-size: 18px;
+		color: $middle-blue;
+		text-decoration: none;
+
+		&:hover {
+			cursor: pointer;
+			background-color: $middle-blue;
+			color: $white;
+			transition: all 0.3s;
+		}
+	}
+}

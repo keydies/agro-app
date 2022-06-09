@@ -20,11 +20,14 @@ export const DesktopMenu = () => {
 				>
 					Довідник
 				</NavLink>
-				<NavLink to='/home/plan' className='header__navigation-item'>
+				<NavLink
+					to='handbook/create-plan/region'
+					className='header__navigation-item'
+				>
 					Створити план
 				</NavLink>
-				<NavLink to='/home/profile' className='header__navigation-item'>
-					Профіль
+				<NavLink to='/home/plans' className='header__navigation-item'>
+					Ваші плани
 				</NavLink>
 				<button
 					className='header__navigation-item'

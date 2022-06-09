@@ -1,5 +1,5 @@
 {
-  "serverPort": 5000,
-  "dbUrl": "mongodb+srv://yevheniia:11110001n@agrocluster.xnu5f.mongodb.net/agro?retryWrites=true&w=majority",
-  "secretKey": "agro-secret"
+	"serverPort": 5000,
+	"dbUrl": "mongodb+srv://yevheniia:11110001n@agrocluster.xnu5f.mongodb.net/agro?retryWrites=true&w=majority",
+	"secretKey": "agro-secret"
 }

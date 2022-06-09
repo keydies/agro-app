@@ -1,0 +1,26 @@
+@import 'vars';
+
+.swiper-slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 90vh;
+	img {
+		padding: 5px;
+		border: 1px solid rgba(0, 0, 0, 0.02);
+		box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+			rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+		border-radius: 5px;
+	}
+	h2 {
+		color: $middle-blue;
+		font-weight: 400;
+		padding: 10px;
+	}
+	div {
+		color: $middle-blue;
+		font-size: 18px;
+		margin-bottom: 10px;
+	}
+}

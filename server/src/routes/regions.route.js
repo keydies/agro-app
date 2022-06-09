@@ -1,14 +1,14 @@
 const Router = require('express');
 
-const Articles = require('../models/Articles');
+const Regions = require('../models/Regions');
 
 const router = new Router();
 
-router.get('/articles', async (req, res) => {
+router.get('/regions', async (req, res) => {
 	try {
-		const articles = await Articles.find();
+		const regions = await Regions.find();
 		return res.json({
-			articles
+			regions
 		});
 	} catch (event) {
 		console.log(event);

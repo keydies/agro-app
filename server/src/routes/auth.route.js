@@ -17,7 +17,8 @@ router.get('/auth', authMiddleware, async (req, res) => {
 			token,
 			user: {
 				id: user.id,
-				email: user.email
+				email: user.email,
+				areas: user.areas
 			}
 		});
 	} catch (e) {

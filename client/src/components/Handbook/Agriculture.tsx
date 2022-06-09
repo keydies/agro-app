@@ -16,9 +16,9 @@ export function Agriculture() {
 						<Link
 							to='/home/handbook/article'
 							// TODO: find valid type to event
-							onClick={(e: any) =>
+							onClick={(event: any) =>
 								dispatch(
-									getArticle(e.currentTarget.textContent)
+									getArticle(event.currentTarget.textContent)
 								)
 							}
 						>

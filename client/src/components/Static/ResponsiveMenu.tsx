@@ -32,11 +32,11 @@ export function ResponsiveMenu() {
 					Створити план
 				</NavLink>
 				<NavLink
-					to='/home/profile'
+					to='/home/plans'
 					className='menu__navigation-item'
 					onClick={() => dispatch(handleModal())}
 				>
-					Профіль
+					Ваші плани
 				</NavLink>
 				<button
 					className='menu__navigation-item'
