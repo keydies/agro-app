@@ -21,7 +21,7 @@ export const DesktopMenu = () => {
 					Довідник
 				</NavLink>
 				<NavLink
-					to='handbook/create-plan/region'
+					to='/home/handbook/create-plan/region'
 					className='header__navigation-item'
 				>
 					Створити план

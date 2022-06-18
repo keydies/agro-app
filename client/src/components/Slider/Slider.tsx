@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 import 'swiper/css';
 import '../../scss/Slider.scss';
-import { UserPlans } from '../UserPlans/UserPlans';
 
 const article = require('../../assets/Articles.jpg');
 const region = require('../../assets/Region.jpg');
@@ -18,7 +17,6 @@ const userPlans = require('../../assets/UserPlans.jpg');
 export function Slider() {
 	return (
 		<Swiper
-			// install Swiper modules
 			modules={[Navigation, Pagination, A11y]}
 			spaceBetween={50}
 			slidesPerView={1}

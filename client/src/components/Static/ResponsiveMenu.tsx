@@ -25,7 +25,7 @@ export function ResponsiveMenu() {
 					Довідник
 				</NavLink>
 				<NavLink
-					to='/home/plan'
+					to='/home/handbook/create-plan/region'
 					className='menu__navigation-item'
 					onClick={() => dispatch(handleModal())}
 				>
